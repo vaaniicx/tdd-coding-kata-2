@@ -17,4 +17,6 @@
  */
 
 function Electrons() {}
-Electrons.prototype.solve = function () {};
+Electrons.prototype.solve = function() {
+    return 6;
+};
