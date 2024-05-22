@@ -18,11 +18,10 @@
 
 function Electrons() {}
 Electrons.prototype.solve = function() {
-    return [...arguments]
-        .filter((number) => isEven(number)) // Only keep even numbers
-        .reduce((accumulator, number) => accumulator + number, 0); // Sum even numbers up
+    const oddNumbers = [...arguments].filter((number) => isOdd(number));
+    return oddNumbers.reduce((accumulator, number) => accumulator + number, 0) - oddNumbers.length;
 };
 
-function isEven(value) {
-    return value % 2 == 0;
+function isOdd(value) {
+    return value % 2 != 0;
 }
