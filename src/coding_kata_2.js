@@ -18,9 +18,11 @@
 
 function Electrons() {}
 Electrons.prototype.solve = function() {
-    let length = [...arguments].length;
-    if(length === 5){
-        return 6;
-    }
-    return 4;
+    return [...arguments]
+        .filter((number) => isEven(number)) // Only keep even numbers
+        .reduce((accumulator, number) => accumulator + number, 0); // Sum even numbers up
 };
+
+function isEven(value) {
+    return value % 2 == 0;
+}
