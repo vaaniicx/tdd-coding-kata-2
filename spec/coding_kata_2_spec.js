@@ -7,4 +7,9 @@ describe('Coding Kata 2', function () {
         expect(electrons.solve(1, 2, 3, 4, 5))
             .toEqual(6);
     });
+
+    it('Should return 4 for given array', function() {
+        expect(electrons.solve(2, 2, 3, 3))
+            .toEqual(4);
+    });
 });
