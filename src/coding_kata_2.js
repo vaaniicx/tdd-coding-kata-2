@@ -18,8 +18,9 @@
 
 function Electrons() {}
 Electrons.prototype.solve = function() {
-    const oddNumbers = [...arguments].filter((number) => isOdd(number));
-    return oddNumbers.reduce((accumulator, number) => accumulator + number, 0) - oddNumbers.length;
+    return [...arguments]
+                .filter((number) => isOdd(number))
+                .reduce((accumulator, number) => accumulator + number -1, 0);
 };
 
 function isOdd(value) {
