@@ -12,4 +12,9 @@ describe('Coding Kata 2', function () {
         expect(electrons.solve(2, 2, 3, 3))
             .toEqual(4);
     });
+
+    it('Should return 2 for given array', function() {
+        expect(electrons.solve(6, 6, 4, 4, 1, 3))
+            .toEqual(2);
+    });
 });
