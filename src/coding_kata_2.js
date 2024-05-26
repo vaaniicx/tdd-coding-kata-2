@@ -20,7 +20,7 @@ function Electrons() {}
 Electrons.prototype.solve = function() {
     return [...arguments]
                 .filter((number) => isOdd(number))
-                .reduce((accumulator, number) => accumulator + number -1, 0);
+                .reduce((accumulator, number) => accumulator + number - 1, 0);
 };
 
 function isOdd(value) {
